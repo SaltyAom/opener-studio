@@ -148,14 +148,14 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 	let related: Stories
 
 	try {
-		story = await get<Story>(`https://nhapi.now.sh/${h}`)
+		story = await get<Story>(`https://nhapi.opener.studio/${h}`)
 	} catch (err) {
 		// @ts-ignore
 		story = { id: 0 }
 	}
 
 	try {
-		let data = await get<Stories>(`https://nhapi.now.sh/${h}/related`)
+		let data = await get<Stories>(`https://nhapi.opener.studio/${h}/related`)
 
 		related = Array.isArray(data) ? data : [data]
 	} catch (err) {

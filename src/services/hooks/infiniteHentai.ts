@@ -68,7 +68,7 @@ const useInfiniteHentai = (initState: Stories) => {
 
 			previousFetch.current = controller
 
-			get<Stories>(`https://nhapi.now.sh/search/${randomTag}/${page}`, {
+			get<Stories>(`https://nhapi.opener.studio/search/${randomTag}/${page}`, {
 				signal
 			})
 				.then(newGalleries => {

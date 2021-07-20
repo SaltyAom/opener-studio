@@ -19,7 +19,7 @@ module.exports = composePlugins(
 							handler: 'CacheFirst'
 						},
 						{
-							urlPattern: /nhapi.now.sh\/\*/,
+							urlPattern: /nhapi.opener.studio\/\*/,
 							handler: 'NetworkFirst',
 							options: {
 								cacheableResponse: {
