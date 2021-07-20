@@ -1,0 +1,8 @@
+node_modules
+.DS_Store
+.git
+.next
+.vercel
+Dockerfile
+.editorconfig
+.gitignore

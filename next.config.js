@@ -1,20 +1,17 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const withOffline = require('next-offline')
-const withPreact = require('next-plugin-preact')
 const withSass = require('@zeit/next-sass')
 
 const composePlugins = require('next-compose-plugins')
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const { join } = require('path')
 
 // const withStyles = require('./tools/withStyles')
-const { useEsbuildLoader } = require('./tools/useEsbuild')
+// const { useEsbuildLoader } = require('./tools/useEsbuild')
 
 module.exports = composePlugins(
 	[
 		[withSass],
-		[withPreact],
 		[
 			withOffline,
 			{
@@ -77,6 +74,8 @@ module.exports = composePlugins(
 
 			config.resolve.alias = {
 				...config.resolve.alias,
+				'react': 'preact/compat',
+				'react-dom': 'preact/compat',
 				'@pages': join(__dirname, 'src/pages'),
 				'@components': join(__dirname, 'src/components'),
 				'@icons': join(__dirname, 'src/icons'),

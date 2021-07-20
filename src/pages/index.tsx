@@ -99,7 +99,7 @@ const Index: FunctionComponent<Props> = ({ stories }) => {
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
 	let stories = await get<Stories>(
-		`https://nhapi-aomkirby123.vercel.app/search/${randomPick(tags)}/1`
+		`https://nhapi.opener.studio/search/${randomPick(tags)}/1`
 	)
 
 	return {

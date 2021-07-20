@@ -74,7 +74,7 @@ const useSearchHentai = ({
 
 			previousFetch.current = controller
 
-			get<Stories>(`https://nhapi-aomkirby123.vercel.app/search/${randomTag}/${page}`, {
+			get<Stories>(`https://nhapi.opener.studio/search/${randomTag}/${page}`, {
 				signal
 			})
 				.then((newGalleries) => {

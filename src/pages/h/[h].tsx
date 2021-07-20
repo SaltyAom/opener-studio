@@ -146,14 +146,14 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
 	} = context as Path
 
 	try {
-		story = await get<Story>(`https://nhapi-aomkirby123.vercel.app/${h}`)
+		story = await get<Story>(`https://nhapi.opener.studio/${h}`)
 	} catch (err) {
 		// @ts-ignore
 		story = { id: 0 }
 	}
 
 	try {
-		let data = await get<Stories>(`https://nhapi-aomkirby123.vercel.app/${h}/related`)
+		let data = await get<Stories>(`https://nhapi.opener.studio/${h}/related`)
 
 		related = Array.isArray(data) ? data : [data]
 	} catch (err) {
